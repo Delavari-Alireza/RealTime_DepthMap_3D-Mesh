@@ -23,7 +23,7 @@ Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 Repository Structure
 depth_estimation.py: Perform depth estimation from RGB images using the Depth Anything V2 model.
