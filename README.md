@@ -25,27 +25,27 @@ Install the required dependencies:
 pip install -r requirements.txt
 ```
 
-Repository Structure
-depth_estimation.py: Perform depth estimation from RGB images using the Depth Anything V2 model.
-point_cloud_generation.py: Generate and visualize 3D point clouds.
-file_export.py: Save depth maps and point clouds in desired formats.
-utils/: Utility scripts for preprocessing, visualization, and file I/O.
-Getting Started
-Clone the repository:
-bash
-Copy code
+## Repository Structure
+- **depth_estimation.py**: Perform depth estimation from RGB images using the Depth Anything V2 model.
+- **depth_estimation.py**: Generate and visualize 3D point clouds..
+- **depth_estimation.py**: Save depth maps and point clouds in desired formats.
+- **depth_estimation.py**: Perform depth estimation from RGB images using the Depth Anything V2 model.
+  
+
+## Clone the repository:
+``` bash
 git clone https://github.com/your_username/depth-3d-pipeline.git
 cd depth-3d-pipeline
-Place your input RGB images in the data/input folder.
+```
+- Place your input RGB images in the data/input folder.
 
-Run the depth estimation script:
+## Run the depth estimation script:
 
-bash
-Copy code
+```bash
 python depth_estimation.py --input data/input --output data/output/depth
 Generate 3D point clouds from the depth maps:
-bash
-Copy code
+```
+
 python point_cloud_generation.py --depth data/output/depth --color data/input --output data/output/pointclouds
 Visualize or export the results:
 bash
