@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 
 import sys
 
-sys.path.append('/home/honamic1/inetrface depthV2Video/Depth_Anything_V2/metric_depth')
+sys.path.append('./Depth_Anything_V2/metric_depth')
 
 torch.cuda.empty_cache()
 
@@ -24,7 +24,7 @@ from depth_anything_v2.dpt import DepthAnythingV2
 
 parser = argparse.ArgumentParser(description='Using Depth Anything V2 for video')
 
-parser.add_argument('--img-path', type=str, default='/home/honamic1/Downloads/5855006285739705331 (1).jpg')
+parser.add_argument('--img-path', type=str, default='./pictures/kitchen.jpg')
 
 parser.add_argument('--focal-length-x', type=float, default=470.5,
                     help='Focal length of the camera in pixels (x-direction)')
@@ -46,7 +46,7 @@ max_depth = 20  # 20 for indoor model, 80 for outdoor model
 
 model = DepthAnythingV2(**{**model_configs[encoder], 'max_depth': max_depth})
 model.load_state_dict(torch.load(
-    '/home/honamic1/inetrface depthV2Video/Depth_Anything_V2/metric_depth/depth_anything_v2_metric_hypersim_vits.pth',
+    'PATH_TO/depth_anything_v2_metric_hypersim_vits.pth',
     map_location='cpu'))
 model = model.to(DEVICE).eval()
 
