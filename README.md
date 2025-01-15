@@ -1,4 +1,4 @@
-# DepthAnything V2 - Demo Codes
+# RealTime DepthMap and 3d Mesh reconstruction based on DepthAnything V2
 
 This repository provides a set of Python scripts demonstrating how to utilize the DepthAnything V2 model for depth estimation and 3D reconstruction from images and videos. These examples leverage the `transformers` library and Open3D to create depth maps, point clouds, and 3D meshes.
 
