@@ -1,0 +1,11 @@
+torch
+torchvision
+numpy
+Pillow
+matplotlib
+opencv-python
+onnx
+onnxruntime
+transformers
+scikit-image
+timm
