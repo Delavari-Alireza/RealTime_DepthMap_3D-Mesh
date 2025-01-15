@@ -39,8 +39,8 @@ Ensure the following requirements are met:
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/YourUsername/DepthAnything-V2-Demos.git
-    cd DepthAnything-V2-Demos
+    git clone https://github.com/Delavari-Alireza/DepthAnythingV2_Demo.git
+    cd DepthAnythingV2_Demo
     ```
 
 2. Install dependencies:
