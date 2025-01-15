@@ -2,8 +2,8 @@
 
 This repository provides a set of Python scripts demonstrating how to utilize the DepthAnything V2 model for depth estimation and 3D reconstruction from images and videos. These examples leverage the `transformers` library and Open3D to create depth maps, point clouds, and 3D meshes.
 
-![DepthMap VIDEO](pictures/mesh_output.gif "DepthMap VIDEO")
-![3D_MESH_VIDEO](pictures/output.gif "3D_MESH_VIDEO")
+![DepthMap VIDEO](pictures/output.gif "DepthMap VIDEO")
+![3D_MESH_VIDEO](pictures/mesh_output.gif "3D_MESH_VIDEO")
 
 
 ## Table of Contents
