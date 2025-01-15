@@ -31,6 +31,7 @@ Ensure the following requirements are met:
 1. **Operating System:** Linux or Windows.
 2. **GPU Support:** NVIDIA CUDA-compatible GPU.
 3. **Dependencies:** Python 3.8+ with required libraries.
+4. **DepthAnyThingV2 Pre-trained Models**: Donwload the pre-trained Models from .[here](https://github.com/DepthAnything/Depth-Anything-V2)
 
 ---
 
