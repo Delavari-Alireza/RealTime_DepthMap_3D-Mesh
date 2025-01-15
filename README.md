@@ -112,7 +112,7 @@ Ensure the following requirements are met:
 - [DepthAnything V2 GitHub Repository](https://github.com/DepthAnything/Depth-Anything-V2)
 - [Transformers Library](https://huggingface.co/docs/transformers/)
 - [Open3D Documentation](http://www.open3d.org/docs/latest/)
-
+- [Free stock footage by Videezy](http://www.videezy.com/)
 ---
 
 For further questions or contributions, feel free to open an issue or submit a pull request!
