@@ -1,70 +1,118 @@
-# DepthAnythingV2_Demo
-Depth and 3D mesh Reconstruction Pipeline realtime
+# DepthAnything V2 - Demo Codes
 
-This repository provides a complete pipeline for depth estimation and 3D reconstruction, leveraging state-of-the-art model **Depth Anything V2**, OpenCV, and Open3D. It supports processing RGB images, predicting depth maps, and generating 3D point clouds for diverse computer vision applications.
+This repository provides a set of Python scripts demonstrating how to utilize the DepthAnything V2 model for depth estimation and 3D reconstruction from images and videos. These examples leverage the `transformers` library and Open3D to create depth maps, point clouds, and 3D meshes.
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Prerequisites](#prerequisites)
+3. [Installation](#installation)
+4. [Scripts Overview](#scripts-overview)
+5. [Usage](#usage)
+6. [References](#references)
 
 ---
 
-## Features
+## Introduction
 
-- **Depth Estimation**: Predict depth maps using pre-trained models.
-- **3D Point Cloud Generation**: Create and visualize point clouds from depth maps and RGB images.
-- **Export Options**: Save outputs like depth maps and point clouds in commonly used formats.
-- **Visualization Tools**: Display point clouds interactively.
+DepthAnything V2 is an advanced depth estimation model that generates accurate depth maps from 2D images. This repository demonstrates its capabilities through Python scripts for various use cases, including:
+
+- Depth map generation from images.
+- Depth map visualization.
+- Conversion of images to 3D point clouds and meshes.
+- Depth estimation from videos with real-time visualization.
 
 ---
 
-## Requirements
+## Prerequisites
 
-- **Python**: 3.9 or later
-- **Libraries**: OpenCV, PyTorch, Open3D, NumPy, Matplotlib
+Ensure the following requirements are met:
 
-Install the required dependencies:
+1. **Operating System:** Linux or Windows.
+2. **GPU Support:** NVIDIA CUDA-compatible GPU.
+3. **Dependencies:** Python 3.8+ with required libraries.
 
-```bash
-pip install -r requirements.txt
-```
+---
 
-## Repository Structure
-- **depth_estimation.py**: Perform depth estimation from RGB images using the Depth Anything V2 model.
-- **depth_estimation.py**: Generate and visualize 3D point clouds..
-- **depth_estimation.py**: Save depth maps and point clouds in desired formats.
-- **depth_estimation.py**: Perform depth estimation from RGB images using the Depth Anything V2 model.
-  
+## Installation
 
-## Clone the repository:
-``` bash
-git clone https://github.com/your_username/depth-3d-pipeline.git
-cd depth-3d-pipeline
-```
-- Place your input RGB images in the data/input folder.
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/YourUsername/DepthAnything-V2-Demos.git
+    cd DepthAnything-V2-Demos
+    ```
 
-## Run the depth estimation script:
+2. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-```bash
-python depth_estimation.py --input data/input --output data/output/depth
-Generate 3D point clouds from the depth maps:
-```
+3. Verify GPU setup for PyTorch:
+    ```python
+    import torch
+    print(torch.cuda.is_available())  # Should return True
+    ```
 
-python point_cloud_generation.py --depth data/output/depth --color data/input --output data/output/pointclouds
-Visualize or export the results:
-bash
-Copy code
-python visualize.py --input data/output/pointclouds
-Examples
-Depth Estimation
-Input RGB image:
+---
 
-Predicted depth map:
+## Scripts Overview
 
-3D Point Cloud
+### 1. **Image to 3D Mesh (HuggingFace)**
+   - Script: `ImageTo3DMesh_HuggingFace.py`
+   - Description: Uses the DepthAnything V2 HuggingFace model to generate depth maps and convert them into 3D meshes.
 
-Contributing
-Contributions are welcome! If you find a bug or have a feature request, feel free to open an issue or submit a pull request.
+### 2. **Image to 3D Mesh (Source Code)**
+   - Script: `ImageTo3DMesh_SourceCode.py`
+   - Description: Demonstrates depth map generation using the DepthAnything V2 source code.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+### 3. **Image to Depth Map (HuggingFace)**
+   - Script: `ImageToDepthMap_HuggingFace.py`
+   - Description: Generates depth maps for single images using the HuggingFace pipeline.
 
-Acknowledgments
-Depth Anything V2 for state-of-the-art depth estimation.
-OpenCV and Open3D for powerful computer vision and 3D processing tools.
+### 4. **Image to Depth Map (Source Code)**
+   - Script: `ImageToDepthMap_SourceCode.py`
+   - Description: Uses DepthAnything V2 source code to generate depth maps from images.
+
+### 5. **Video to 3D Mesh (HuggingFace)**
+   - Script: `VideoTo3DMesh_HuggingFace.py`
+   - Description: Processes videos to generate 3D meshes frame by frame.
+
+---
+
+## Usage
+
+### Running the Scripts
+
+1. **Image to Depth Map**
+   ```bash
+   python ImageToDepthMap_HuggingFace.py --img-path /path/to/image.jpg
+   ```
+
+2. **Image to 3D Mesh**
+   ```bash
+   python ImageTo3DMesh_HuggingFace.py --img-path /path/to/image.jpg
+   ```
+
+3. **Video to 3D Mesh**
+   ```bash
+   python VideoTo3DMesh_HuggingFace.py --video-path /path/to/video.mp4
+   ```
+
+### Key Parameters
+
+- `--img-path`: Path to the input image.
+- `--video-path`: Path to the input video file.
+- `--focal-length-x` and `--focal-length-y`: Camera intrinsic parameters for point cloud generation.
+
+---
+
+## References
+
+- [DepthAnything V2 GitHub Repository](https://github.com/DepthAnything/Depth-Anything-V2)
+- [Transformers Library](https://huggingface.co/docs/transformers/)
+- [Open3D Documentation](http://www.open3d.org/docs/latest/)
+
+---
+
+For further questions or contributions, feel free to open an issue or submit a pull request!
+
