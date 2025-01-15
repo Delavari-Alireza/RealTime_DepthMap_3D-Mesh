@@ -39,7 +39,7 @@ Ensure the following requirements are met:
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/Delavari-Alireza/DepthAnythingV2_Demo.git
+    git clone --recursive https://github.com/Delavari-Alireza/DepthAnythingV2_Demo.git
     cd DepthAnythingV2_Demo
     ```
 
