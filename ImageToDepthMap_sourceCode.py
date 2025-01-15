@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 import sys
 
-sys.path.append('/media/honamic1/New Volume/DepthAnything V2/inetrface depthV2Video/Depth_Anything_V2/metric_depth')
+sys.path.append('./Depth_Anything_V2/metric_depth')
 
 torch.cuda.empty_cache()
 
@@ -40,7 +40,7 @@ encoder = 'vits'  # or 'vits', 'vitb'
 max_depth = 80  # 20 for indoor model, 80 for outdoor model
 
 model = DepthAnythingV2(**{**model_configs[encoder], 'max_depth': max_depth})
-model.load_state_dict(torch.load('/media/honamic1/New Volume/DepthAnything V2/depth_anything_v2_metric_vkitti_vits.pth',
+model.load_state_dict(torch.load('PaTH_TO/depth_anything_v2_metric_vkitti_vits.pth',
                                  map_location='cpu'))
 # model.load_state_dict(torch.load('/home/honamic1/inetrface depthV2Video/Depth_Anything_V2/metric_depth/depth_anything_v2_metric_hypersim_vits.pth', map_location='cpu'))
 model = model.to(DEVICE).eval()
@@ -57,7 +57,7 @@ model = model.to(DEVICE).eval()
 
 # filename = "/home/honamic1/Downloads/pictues/907c74bd-90e9-49c1-bb2f-fb4b5366dbc5.jpeg" #args.img_path
 
-filename = "/media/honamic1/New Volume/DepthAnything V2/pictues/imgTeh/image_teh/292836.jpg"  # args.img_path
+filename = "./pictures/kitchen.jpg"  # args.img_path
 
 color_image = Image.open(filename).convert('RGB')
 width, height = color_image.size
