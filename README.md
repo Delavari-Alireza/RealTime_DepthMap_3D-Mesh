@@ -43,7 +43,7 @@ Ensure the following requirements are met:
 
 1. Clone this repository:
     ```bash
-    git clone --recursive https://github.com/Delavari-Alireza/DepthAnythingV2_Demo.git
+    git clone --recursive https://github.com/Delavari-Alireza/RealTime_DepthMap_3D-Mesh.git
     cd DepthAnythingV2_Demo
     ```
 
